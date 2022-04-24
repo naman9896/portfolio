@@ -13,7 +13,7 @@ const Home = () => {
         <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
           I'm a{" "}
           <Typed
-            strings={["Developer", "Designer", "Blogger", "Freelancer"]}
+            strings={["Developer", "Blogger", "Designer", "Freelancer"]}
             typeSpeed={40}
             backSpeed={50}
             loop
