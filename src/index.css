@@ -32,3 +32,12 @@
 .logo {
   width: 50px;
 }
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: rgb(191, 149, 240, 0.6);
+}
+
+::selection {
+  background: rgb(191, 149, 240, 0.6);
+}
