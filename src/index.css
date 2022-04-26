@@ -41,3 +41,7 @@
 ::selection {
   background: rgb(191, 149, 240, 0.6);
 }
+
+.active {
+  color: rgb(215, 59, 85);
+}

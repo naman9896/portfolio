@@ -1,7 +1,8 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import Typed from "react-typed";
+// import Particles from "react-tsparticles";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
           I'm a{" "}
           <Typed
             strings={["Developer", "Blogger", "Designer", "Freelancer"]}
+            showCursor={false}
             typeSpeed={40}
             backSpeed={50}
             loop
