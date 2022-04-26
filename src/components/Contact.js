@@ -1,11 +1,14 @@
 import React from "react";
+import Particles from "react-tsparticles";
+import options from "./options";
 
 const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-4"
+      className="w-full h-screen flex justify-center items-center p-4"
     >
+      <Particles className="absolute z-[-1]" options={options} />
       <form
         action="https://getform.io/f/e1b7af9e-7af0-4f2b-a99c-fb430a600573"
         method="POST"

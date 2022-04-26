@@ -2,12 +2,14 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 // import { Link } from "react-scroll";
 import Typed from "react-typed";
-// import Particles from "react-tsparticles";
+import Particles from "react-tsparticles";
+import options from "./options";
 
 const Home = () => {
   return (
-    <div name="home" className="bg-[#0a192f] w-full h-screen">
+    <div name="home" className="w-full h-screen">
       {/* Container */}
+      <Particles className="absolute z-[-1]" options={options} />
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-pink-600">Hi, my name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">Naman</h1>
