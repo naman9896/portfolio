@@ -49,3 +49,63 @@ body {
 .active {
   color: rgb(215, 59, 85);
 }
+
+.animation-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.introLoadMain {
+  animation: moveDown 1s ease-in-out;
+}
+
+.introLoadNav {
+  animation: moveUp 1s ease-in-out;
+}
+
+.introLoadSocial {
+  animation: moveRight 1s ease-in-out;
+}
+
+.introLoadAbout {
+  animation: moveLeft 1s ease-in-out;
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

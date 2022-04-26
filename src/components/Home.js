@@ -11,9 +11,11 @@ const Home = () => {
       {/* Container */}
       <Particles className="absolute z-[-1]" options={options} />
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <p className="text-pink-600">Hi, my name is</p>
-        <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">Naman</h1>
-        <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
+        <p className="text-pink-600 introLoadMain">Hi, my name is</p>
+        <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6] introLoadMain">
+          Naman
+        </h1>
+        <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0] introLoadMain">
           I'm a{" "}
           <Typed
             strings={["Developer", "Blogger", "Designer", "Freelancer"]}
@@ -23,14 +25,14 @@ const Home = () => {
             loop
           />
         </h2>
-        <p className="text-[#8892b0] py-4 max-w-[700px]">
+        <p className="text-[#8892b0] py-4 max-w-[700px] introLoadMain">
           I'm specialized in Full-Stack Development. Currently, I'm pursuing my
           BCA from Chitkara University. I'm passionate about web development so
           that I can leverage my creativity.
         </p>
         <div>
           <a href="/work">
-            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
+            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 introLoadMain">
               View Work
               <span className="group-hover:rotate-90 duration-300">
                 <HiArrowNarrowRight className="ml-4" />
