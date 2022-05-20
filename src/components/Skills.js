@@ -1,5 +1,5 @@
 import React from "react";
-import data from "./skillsData";
+import data from "./data/skillsData";
 import Particles from "react-tsparticles";
 import options from "./options";
 

@@ -8,7 +8,7 @@ export default {
       value: 30,
       density: {
         enable: true,
-        value_area: 800,
+        value_area: 300,
       },
     },
     color: {
@@ -18,7 +18,7 @@ export default {
       type: "circle",
     },
     opacity: {
-      value: 0.5,
+      value: 0.6,
       random: false,
       anim: {
         enable: false,
@@ -46,7 +46,7 @@ export default {
     },
     move: {
       enable: true,
-      speed: 4,
+      speed: 2,
       direction: "none",
       random: false,
       straight: false,
