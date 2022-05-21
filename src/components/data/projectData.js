@@ -16,9 +16,9 @@ export default [
   {
     id: 2,
     name: "Apprenant",
-    image: "src",
-    demo: "link",
-    code: "link",
+    image: "app.png",
+    demo: "https://arcane-forest-10585.herokuapp.com",
+    code: "https://github.com/naman9896/apprenant-nodejs.git",
   },
   {
     id: 3,
