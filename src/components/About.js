@@ -22,12 +22,11 @@ const About = () => {
           </div>
           <div className="introLoadAbout">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              cum vel amet, impedit distinctio repellendus quasi ab corporis
-              eveniet molestiae aliquam perspiciatis est harum nemo
-              voluptatibus! Deserunt, laudantium? Provident temporibus quisquam
-              quibusdam inventore iste commodi laborum alias illum voluptatum
-              enim debitis.
+              I'm a Full-Stack Developer located in India and I enjoy creating
+              things that live on the internet. My interest in web development
+              started back in 2020 when I decided to try editing custom Tumblr
+              themes — turns out hacking together a custom reblog button taught
+              me a lot about HTML & CSS!
             </p>
           </div>
         </div>
