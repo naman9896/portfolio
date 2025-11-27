@@ -18,9 +18,9 @@ const Contact = () => {
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300">
             Contact
           </p>
-          <p className="text-gray-300 py-4">
+          <p className="text-gray-300 pt-4">
             Submit the form below or shoot me an email -
-            namanmattu36166@gmail.com
+            namanmattu4450@gmail.com
           </p>
         </div>
         <input
@@ -37,7 +37,7 @@ const Contact = () => {
         />
         <textarea
           className="p-2 bg-[#ccd6f6]"
-          rows="10"
+          rows="8"
           name="message"
           placeholder="Message"
         ></textarea>

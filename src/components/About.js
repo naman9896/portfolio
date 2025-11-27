@@ -22,11 +22,11 @@ const About = () => {
           </div>
           <div className="introLoadAbout">
             <p>
-              I'm a Full-Stack Developer located in India and I enjoy creating
-              things that live on the internet. My interest in web development
-              started back in 2020 when I decided to try editing custom Tumblr
-              themes — turns out hacking together a custom reblog button taught
-              me a lot about HTML & CSS!
+              I'm a Front-end Developer located in Australia and I enjoy
+              creating things that live on the internet. My interest in web
+              development started back in 2020 when I decided to try editing
+              custom Tumblr themes — turns out hacking together a custom reblog
+              button taught me a lot about HTML & CSS!
             </p>
           </div>
         </div>

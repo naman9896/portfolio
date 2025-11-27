@@ -10,7 +10,7 @@ export default [
     id: 1,
     name: "Crypto Information",
     image: "crypto-app.png",
-    demo: "https://naman9896.github.io/crypto-info/",
+    demo: "https://crypto-info-swart.vercel.app/",
     code: "https://github.com/naman9896/crypto-info.git",
   },
   {

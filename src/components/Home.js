@@ -26,9 +26,10 @@ const Home = () => {
           />
         </h2>
         <p className="text-[#8892b0] py-4 max-w-[700px] introLoadMain">
-          I'm specialized in Full-Stack Development. Currently, I'm pursuing my
-          BCA from Chitkara University. I'm passionate about web development so
-          that I can leverage my creativity.
+          I'm specialized in Front-end Development. Currently, I recently
+          completed my Master of Information Technology from University of
+          Newcastle. I'm passionate about web development so that I can leverage
+          my creativity.
         </p>
         <div>
           <a href="/work">

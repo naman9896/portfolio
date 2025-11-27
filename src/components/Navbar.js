@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import "../index.css";
 import Logo from "../assets/logo.png";
-import Pdf from "../assets/resume.pdf";
+import Pdf from "../assets/NamanResume.pdf";
 import { NavLink } from "react-router-dom";
 // import { Link } from "react-scroll";
 
@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
 
       {/* Menu */}
-      <ul className=" hidden md:flex introLoadNav">
+      <ul className=" hidden md:flex ya">
         <li className="hover:text-pink-600">
           <NavLink
             to="/"
@@ -107,7 +107,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="mailto: namanmattu36166@gmail.com" target="_blank">
+            <a href="mailto: namanmattu4450@gmail.com" target="_blank">
               <HiOutlineMail className="hover:text-pink-500" size={20} />
             </a>
           </li>
