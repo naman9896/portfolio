@@ -1,10 +1,10 @@
 export default [
   {
     id: 0,
-    name: "Mene Generator",
-    image: "meme-app.png",
-    demo: "https://naman9896.github.io/memegenerator/",
-    code: "https://github.com/naman9896/memegenerator.git",
+    name: "Car Share Bay",
+    image: "app.png",
+    demo: "https://naman9896.github.io/CarShare/",
+    code: "https://github.com/naman9896/CarShareBayAnalysis.git",
   },
   {
     id: 1,
@@ -15,10 +15,10 @@ export default [
   },
   {
     id: 2,
-    name: "Apprenant",
-    image: "app.png",
-    demo: "https://arcane-forest-10585.herokuapp.com",
-    code: "https://github.com/naman9896/apprenant-nodejs.git",
+    name: "Task App",
+    image: "task-app.png",
+    demo: "https://naman9896.github.io/task-app/",
+    code: "https://github.com/naman9896/task-app.git/",
   },
   {
     id: 3,
@@ -36,9 +36,9 @@ export default [
   },
   {
     id: 5,
-    name: "Task App",
-    image: "task-app.png",
-    demo: "https://naman9896.github.io/task-app/",
-    code: "https://github.com/naman9896/task-app.git/",
+    name: "Food Order App",
+    image: "food-app.png",
+    demo: "https://food-app-lake-three.vercel.app/",
+    code: "https://github.com/naman9896/food-app.git",
   },
 ];

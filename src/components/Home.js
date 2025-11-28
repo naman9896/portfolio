@@ -2,6 +2,7 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 // import { Link } from "react-scroll";
 import Typed from "react-typed";
+import TextLoop from "react-text-loop";
 import Particles from "react-tsparticles";
 import options from "./options";
 
@@ -17,19 +18,26 @@ const Home = () => {
         </h1>
         <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0] introLoadMain">
           I'm a{" "}
-          <Typed
+          <TextLoop
+            springConfig={{ stiffness: 70, damping: 31 }}
+            adjustingSpeed={100}
+          >
+            <span>Developer</span>
+            <span>Designer</span>
+            <span>Freelancer</span>
+          </TextLoop>{" "}
+          {/* <Typed
             strings={["Developer", "Blogger", "Designer", "Freelancer"]}
             showCursor={false}
             typeSpeed={40}
             backSpeed={50}
             loop
-          />
+          /> */}
         </h2>
         <p className="text-[#8892b0] py-4 max-w-[700px] introLoadMain">
-          I'm specialized in Front-end Development. Currently, I recently
-          completed my Master of Information Technology from University of
-          Newcastle. I'm passionate about web development so that I can leverage
-          my creativity.
+          I'm specialized in Front-end Development. I recently completed my
+          Master of Information Technology from University of Newcastle. I'm
+          passionate about web development so that I can leverage my creativity.
         </p>
         <div>
           <a href="/work">
