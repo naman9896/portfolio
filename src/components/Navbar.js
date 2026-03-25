@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-50">
       <div>
         <a href="/">
-          <img src={Logo} alt="Logo Image" className="logo" />
+          <img src={Logo} alt="Logo" className="logo" />
         </a>
       </div>
       {/* Menu */}
@@ -94,22 +94,31 @@ const Navbar = () => {
             <a
               href="https://www.linkedin.com/in/naman-0308321a9/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin className="hover:text-pink-500" size={20} />
             </a>
           </li>
           <li>
-            <a href="https://github.com/naman9896" target="_blank">
+            <a
+              href="https://github.com/naman9896"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub className="hover:text-pink-500" size={20} />
             </a>
           </li>
           <li>
-            <a href="mailto: namanmattu4450@gmail.com" target="_blank">
+            <a
+              href="mailto: namanmattu4450@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <HiOutlineMail className="hover:text-pink-500" size={20} />
             </a>
           </li>
           <li>
-            <a href={Pdf} target="_blank">
+            <a href={Pdf} target="_blank" rel="noopener noreferrer">
               <BsFillPersonLinesFill
                 className="hover:text-pink-500"
                 size={20}
@@ -125,6 +134,7 @@ const Navbar = () => {
             <a
               href="https://www.linkedin.com/in/naman-0308321a9/"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
             >
               LinkedIn <FaLinkedin size={30} />
@@ -134,6 +144,7 @@ const Navbar = () => {
             <a
               href="https://github.com/naman9896"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
             >
               Github <FaGithub size={30} />
@@ -151,6 +162,7 @@ const Navbar = () => {
             <a
               href={Pdf}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-between items-center w-full text-gray-300"
             >
               Resume <BsFillPersonLinesFill size={30} />

@@ -1,7 +1,7 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 // import { Link } from "react-scroll";
-import Typed from "react-typed";
+// import Typed from "react-typed";
 import TextLoop from "react-text-loop";
 import Particles from "react-tsparticles";
 import options from "./options";
