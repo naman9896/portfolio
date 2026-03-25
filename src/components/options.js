@@ -1,4 +1,4 @@
-export default {
+const options = {
   fullScreen: {
     enable: true,
     zIndex: 1,
@@ -113,3 +113,4 @@ export default {
     size: "cover",
   },
 };
+export default options;

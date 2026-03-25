@@ -1,4 +1,4 @@
-export default [
+const skillsData = [
   {
     image: "html.png",
     text: "HTML",
@@ -32,3 +32,4 @@ export default [
     text: "Tailwind CSS",
   },
 ];
+export default skillsData;

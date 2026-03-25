@@ -1,4 +1,4 @@
-export default [
+const projectData = [
   {
     id: 0,
     name: "Job Tracker App",
@@ -42,3 +42,5 @@ export default [
     code: "https://github.com/naman9896/react-notes-app.git/",
   },
 ];
+
+export default projectData;
