@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import "../index.css";
 import Logo from "../assets/logo.png";
-import Pdf from "../assets/NamanResume.pdf";
+import Pdf from "../assets/Naman-Resume.pdf";
 import { NavLink } from "react-router-dom";
 // import { Link } from "react-scroll";
 
@@ -18,7 +18,6 @@ const Navbar = () => {
           <img src={Logo} alt="Logo Image" className="logo" />
         </a>
       </div>
-
       {/* Menu */}
       <ul className=" hidden md:flex ya">
         <li className="hover:text-pink-600">
@@ -62,12 +61,10 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-
       {/* Hamburger */}
       <div onClick={handleClick} className="md:hidden z-50">
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
-
       {/* Mobile Menu */}
       <ul
         className={
@@ -121,7 +118,6 @@ const Navbar = () => {
           </li>
         </ul>
       </ul>
-
       {/* Social icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0 introLoadSocial">
         <ul>
