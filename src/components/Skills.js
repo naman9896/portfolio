@@ -1,26 +1,38 @@
 import React from "react";
-import data from "./data/skillsData";
 import Particles from "react-tsparticles";
 import options from "./options";
+import MagnifiedBento from "./ui/magnified-bento";
+import { IconCloud } from "./ui/interactive-icon-cloud";
+
+const iconSlugs = [
+  "html5",
+  "css3",
+  "javascript",
+  "typescript",
+  "react",
+  "nextdotjs",
+  "github",
+  "git",
+  "nodedotjs",
+  "mongodb",
+  "tailwindcss",
+  "framer",
+  "docker",
+  "csharp",
+  "android",
+  "amazonaws",
+  "firebase",
+  "figma",
+  "shopify",
+  "vercel",
+  "flutter",
+];
 
 const Skills = () => {
-  const skillCards = data.map((card) => {
-    return (
-      <div className="shadow-md shadow-[#040c16] bg-[#0a192f] hover:scale-110 duration-500">
-        <img
-          className="w-20 mx-auto"
-          src={`./icons/${card.image}`}
-          alt={card.text + " icon"}
-        />
-        <p className="my-4">{card.text}</p>
-      </div>
-    );
-  });
   return (
-    <div name="skills" className="text-gray-300 w-full h-screen">
-      {/* Container */}
+    <div name="skills" className="text-foreground w-full min-h-screen pt-28">
       <Particles className="absolute z-[-1]" options={options} />
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col w-full pb-8">
         <div>
           <p className="text-4xl font-bold inline border-b-4 border-pink-600">
             Skills
@@ -28,8 +40,13 @@ const Skills = () => {
           <p className="py-4">These are the technologies I've worked with</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
-          {skillCards}
+        <div className="relative z-10 w-full grid md:grid-cols-2 gap-4 my-2 py-2 bg-background rounded-3xl min-h-[420px]">
+          <div className="h-full">
+            <MagnifiedBento />
+          </div>
+          <div className="relative w-full h-full min-h-[420px]">
+            <IconCloud iconSlugs={iconSlugs} />
+          </div>
         </div>
       </div>
     </div>

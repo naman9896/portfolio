@@ -12,7 +12,7 @@ const options = {
       },
     },
     color: {
-      value: ["#f67e7d", "#843b62", "#621940"],
+      value: ["#ec4899", "#f472b6", "#db2777"],
     },
     shape: {
       type: "circle",
@@ -40,8 +40,8 @@ const options = {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#843b62",
-      opacity: 0.4,
+      color: "#f9a8d4",
+      opacity: 0.3,
       width: 1,
     },
     move: {
@@ -106,7 +106,7 @@ const options = {
   },
   retina_detect: true,
   background: {
-    color: "#0a192f",
+    color: "#fafafa",
     image: "",
     position: "50% 50%",
     repeat: "no-repeat",

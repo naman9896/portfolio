@@ -4,6 +4,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
 
+:root {
+  --background: 0 0% 98%;
+  --foreground: 240 10% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 4%;
+  --muted: 210 20% 93%;
+  --muted-foreground: 215 16% 47%;
+  --primary: 330 81% 60%;
+  --primary-foreground: 0 0% 100%;
+  --border: 240 6% 90%;
+}
+
 @layer base {
   body {
     @apply font-[Raleway];
@@ -15,7 +27,7 @@
 }
 
 body {
-  background-color: #0a192f;
+  background-color: #fafafa;
 }
 
 .content-div {

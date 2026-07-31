@@ -5,7 +5,7 @@ import options from "./options";
 
 const About = () => {
   return (
-    <div name="about" className="w-full h-screen text-gray-300">
+    <div name="about" className="w-full h-screen text-foreground">
       <Particles className="absolute z-[-1]" options={options} />
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
