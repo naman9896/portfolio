@@ -14,6 +14,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import { motion, useMotionValue, useMotionTemplate } from "motion/react";
 import { cn } from "@/lib/utils";
+import { playHover } from "@/lib/sound";
 
 const TAG_ROWS = [
   [
@@ -65,7 +66,10 @@ const MagnifiedBento = () => {
 
   return (
     <div className="flex items-center justify-center p-4 sm:p-6 w-full h-full not-prose">
-      <div className="group relative w-full max-w-[420px] overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-card p-1.5 sm:p-2 shadow-xl shadow-black/10 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+      <div
+        className="group relative w-full max-w-[420px] overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-card p-1.5 sm:p-2 shadow-xl shadow-black/10 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1"
+        onMouseEnter={() => playHover()}
+      >
         <div
           ref={containerRef}
           className={cn(

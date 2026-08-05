@@ -7,6 +7,7 @@ import {
   useTransform,
 } from "motion/react";
 import { cn } from "@/lib/utils";
+import { playClick } from "@/lib/sound";
 
 export function Button({
   borderRadius = "0px",
@@ -16,6 +17,7 @@ export function Button({
   borderClassName,
   duration,
   className,
+  onClick,
   ...otherProps
 }: {
   borderRadius?: string;
@@ -25,8 +27,14 @@ export function Button({
   borderClassName?: string;
   duration?: number;
   className?: string;
+  onClick?: (e: any) => void;
   [key: string]: any;
 }) {
+  const handleClick = (e: any) => {
+    playClick();
+    onClick?.(e);
+  };
+
   return (
     <Component
       className={cn(
@@ -36,6 +44,7 @@ export function Button({
       style={{
         borderRadius: borderRadius,
       }}
+      onClick={handleClick}
       {...otherProps}
     >
       <div

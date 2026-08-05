@@ -11,6 +11,7 @@ import "../index.css";
 import Logo from "../assets/logo.png";
 import Pdf from "../assets/Naman-Resume.pdf";
 import { NavLink } from "react-router-dom";
+import { playHover, playClick } from "@/lib/sound";
 // import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -30,13 +31,13 @@ const Navbar = () => {
     <div className="fixed w-full z-50">
       <div className="relative z-30 h-[80px] flex justify-between items-center px-4 bg-background/95 backdrop-blur shadow-md text-foreground">
         <div>
-          <a href="/">
+          <a href="/" onMouseEnter={() => playHover()}>
             <img src={Logo} alt="Logo" className="logo" />
           </a>
         </div>
         {/* Menu */}
         <ul className=" hidden md:flex ya">
-          <li className="hover:text-pink-600">
+          <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
             <NavLink
               to="/"
               className={(navData) =>
@@ -46,7 +47,7 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li className="hover:text-pink-600">
+          <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
             <NavLink
               to="/about"
               className={(navData) =>
@@ -56,7 +57,7 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
-          <li className="hover:text-pink-600">
+          <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
             <NavLink
               to="/skills"
               className={(navData) =>
@@ -66,7 +67,7 @@ const Navbar = () => {
               Skills
             </NavLink>
           </li>
-          <li className="hover:text-pink-600">
+          <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
             <NavLink
               to="/work"
               className={(navData) =>
@@ -76,7 +77,7 @@ const Navbar = () => {
               Work
             </NavLink>
           </li>
-          <li className="hover:text-pink-600">
+          <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
             <NavLink
               to="/contact"
               className={(navData) =>
@@ -88,7 +89,13 @@ const Navbar = () => {
           </li>
         </ul>
         {/* Hamburger */}
-        <div onClick={handleClick} className="relative z-50 md:hidden">
+        <div
+          onClick={() => {
+            playClick();
+            handleClick();
+          }}
+          className="relative z-50 md:hidden"
+        >
           {!nav ? <FaBars /> : <FaTimes />}
         </div>
       </div>
@@ -160,6 +167,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center w-full h-full text-foreground"
+              onMouseEnter={() => playHover()}
             >
               <span className="flex-1 pl-4 whitespace-nowrap">LinkedIn</span>
               <span className="w-[60px] h-full shrink-0 flex items-center justify-center">
@@ -176,6 +184,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center w-full h-full text-foreground"
+              onMouseEnter={() => playHover()}
             >
               <span className="flex-1 pl-4 whitespace-nowrap">Github</span>
               <span className="w-[60px] h-full shrink-0 flex items-center justify-center">
@@ -190,6 +199,7 @@ const Navbar = () => {
             <a
               href="mailto: namanmattu36166@gmail.com"
               className="flex items-center w-full h-full text-foreground"
+              onMouseEnter={() => playHover()}
             >
               <span className="flex-1 pl-4 whitespace-nowrap">Email</span>
               <span className="w-[60px] h-full shrink-0 flex items-center justify-center">
@@ -206,6 +216,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center w-full h-full text-foreground"
+              onMouseEnter={() => playHover()}
             >
               <span className="flex-1 pl-4 whitespace-nowrap">Resume</span>
               <span className="w-[60px] h-full shrink-0 flex items-center justify-center">

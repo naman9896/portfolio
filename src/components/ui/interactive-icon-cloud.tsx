@@ -6,9 +6,11 @@ import {
   renderSimpleIcon,
   SimpleIcon,
 } from "react-icon-cloud";
+import { playSwoosh } from "@/lib/sound";
 
 export const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
+    onPointerDown: () => playSwoosh(),
     style: {
       display: "flex",
       justifyContent: "center",

@@ -1,6 +1,7 @@
 import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll, MotionValue } from "motion/react";
 import { useRef, forwardRef } from "react";
+import { playHover } from "@/lib/sound";
 
 export interface StackingProject {
   id: number | string;
@@ -72,7 +73,8 @@ const Card = ({
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="flex flex-col relative -top-[25%] h-[450px] w-[90%] sm:w-[80%] md:w-[70%] rounded-2xl p-6 sm:p-10 origin-top shadow-2xl"
+        className="flex flex-col relative -top-[25%] h-[560px] w-[90%] sm:w-[80%] md:w-[70%] rounded-2xl p-6 sm:p-10 origin-top shadow-2xl"
+        onMouseEnter={() => playHover()}
       >
         <h2 className="text-2xl text-center font-semibold text-white">
           {title}
@@ -101,7 +103,7 @@ const Card = ({
             </span>
           </div>
 
-          <div className="relative w-full md:w-[60%] h-40 md:h-full rounded-lg overflow-hidden">
+          <div className="relative w-full md:w-[60%] h-56 md:h-full rounded-lg overflow-hidden">
             <motion.div className="w-full h-full" style={{ scale: imageScale }}>
               <img
                 src={imageUrl}
