@@ -69,6 +69,16 @@ const Navbar = () => {
           </li>
           <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
             <NavLink
+              to="/services"
+              className={(navData) =>
+                navData.isActive ? "text-pink-600" : ""
+              }
+            >
+              Services
+            </NavLink>
+          </li>
+          <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
+            <NavLink
               to="/work"
               className={(navData) =>
                 navData.isActive ? "text-pink-600" : ""
@@ -115,6 +125,9 @@ const Navbar = () => {
         </li>
         <li className="py-6 text-4xl hover:text-pink-600">
           <a href="/skills">Skills</a>
+        </li>
+        <li className="py-6 text-4xl hover:text-pink-600">
+          <a href="/services">Services</a>
         </li>
         <li className="py-6 text-4xl hover:text-pink-600">
           <a href="/work">Work</a>

@@ -1,0 +1,60 @@
+const servicesData = [
+  {
+    id: 0,
+    icon: "FaStore",
+    title: "Local Business Websites",
+    description:
+      "Custom, mobile-friendly websites for local businesses like tradespeople, studios, and tutors — built to build trust and turn visitors into customers.",
+  },
+  {
+    id: 1,
+    icon: "FaShoppingCart",
+    title: "E-Commerce Stores",
+    description:
+      "Online stores built with Shopify or custom React storefronts, with product pages, checkout, and payment integration.",
+  },
+  {
+    id: 2,
+    icon: "FaLaptopCode",
+    title: "Custom Web Applications",
+    description:
+      "Full-stack web apps built with React, Next.js, and Node.js — dashboards, booking systems, trackers, and internal tools.",
+  },
+  {
+    id: 3,
+    icon: "FaPaintBrush",
+    title: "UI/UX Design",
+    description:
+      "Clean, modern interface design in Figma, from wireframes to polished, responsive designs ready for development.",
+  },
+  {
+    id: 4,
+    icon: "FaSearch",
+    title: "SEO & Performance Optimization",
+    description:
+      "Faster load times, better search rankings, and Core Web Vitals improvements for existing websites.",
+  },
+  {
+    id: 5,
+    icon: "FaTools",
+    title: "Website Maintenance & Support",
+    description:
+      "Ongoing updates, bug fixes, content changes, and monitoring so your site stays fast, secure, and up to date.",
+  },
+  {
+    id: 6,
+    icon: "FaCloud",
+    title: "Deployment & Hosting Setup",
+    description:
+      "Deploying and configuring sites on Vercel, AWS, or Firebase, including domains, CI/CD, and Dockerized environments.",
+  },
+  {
+    id: 7,
+    icon: "FaMobileAlt",
+    title: "Mobile App Development",
+    description:
+      "Cross-platform mobile apps built with Flutter for iOS and Android from a single codebase.",
+  },
+];
+
+export default servicesData;
