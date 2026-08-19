@@ -2,27 +2,14 @@ import React from "react";
 import Particles from "react-tsparticles";
 import options from "./options";
 import servicesData from "./data/servicesData";
-import {
-  FaStore,
-  FaShoppingCart,
-  FaLaptopCode,
-  FaPaintBrush,
-  FaSearch,
-  FaTools,
-  FaCloud,
-  FaMobileAlt,
-} from "react-icons/fa";
+import { CircularCarousel } from "./ui/circular-carousel";
 
-const icons = {
-  FaStore,
-  FaShoppingCart,
-  FaLaptopCode,
-  FaPaintBrush,
-  FaSearch,
-  FaTools,
-  FaCloud,
-  FaMobileAlt,
-};
+const carouselItems = servicesData.map(({ id, title, description, tag }) => ({
+  id: String(id),
+  title,
+  description,
+  tag,
+}));
 
 const Services = () => {
   return (
@@ -36,20 +23,8 @@ const Services = () => {
           <p className="py-6">Here's what I can help you with</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-4">
-          {servicesData.map(({ id, icon, title, description }) => {
-            const Icon = icons[icon];
-            return (
-              <div
-                key={id}
-                className="bg-card text-card-foreground rounded-2xl p-6 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-              >
-                <Icon className="text-pink-600" size={28} />
-                <h3 className="text-xl font-bold mt-4">{title}</h3>
-                <p className="mt-2 text-sm opacity-80">{description}</p>
-              </div>
-            );
-          })}
+        <div className="w-full overflow-hidden py-8">
+          <CircularCarousel items={carouselItems} />
         </div>
       </div>
     </div>
