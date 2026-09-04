@@ -10,9 +10,8 @@ import {
 import "../index.css";
 import Logo from "../assets/logo.png";
 import Pdf from "../assets/Naman-Resume.pdf";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import { playHover, playClick } from "@/lib/sound";
-// import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -31,71 +30,96 @@ const Navbar = () => {
     <div className="fixed w-full z-50">
       <div className="relative z-30 h-[80px] flex justify-between items-center px-4 bg-background/95 backdrop-blur shadow-md text-foreground">
         <div>
-          <a href="/" onMouseEnter={() => playHover()}>
+          <Link
+            to="home"
+            smooth
+            duration={500}
+            offset={-80}
+            className="cursor-pointer"
+            onMouseEnter={() => playHover()}
+          >
             <img src={Logo} alt="Logo" className="logo" />
-          </a>
+          </Link>
         </div>
         {/* Menu */}
         <ul className=" hidden md:flex ya">
           <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
-            <NavLink
-              to="/"
-              className={(navData) =>
-                navData.isActive ? "text-pink-600" : ""
-              }
+            <Link
+              to="home"
+              spy
+              smooth
+              duration={500}
+              offset={-80}
+              activeClass="text-pink-600"
+              className="cursor-pointer"
             >
               Home
-            </NavLink>
+            </Link>
           </li>
           <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
-            <NavLink
-              to="/about"
-              className={(navData) =>
-                navData.isActive ? "text-pink-600" : ""
-              }
+            <Link
+              to="about"
+              spy
+              smooth
+              duration={500}
+              offset={-80}
+              activeClass="text-pink-600"
+              className="cursor-pointer"
             >
               About
-            </NavLink>
+            </Link>
           </li>
           <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
-            <NavLink
-              to="/skills"
-              className={(navData) =>
-                navData.isActive ? "text-pink-600" : ""
-              }
+            <Link
+              to="skills"
+              spy
+              smooth
+              duration={500}
+              offset={-80}
+              activeClass="text-pink-600"
+              className="cursor-pointer"
             >
               Skills
-            </NavLink>
+            </Link>
           </li>
           <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
-            <NavLink
-              to="/services"
-              className={(navData) =>
-                navData.isActive ? "text-pink-600" : ""
-              }
+            <Link
+              to="services"
+              spy
+              smooth
+              duration={500}
+              offset={-80}
+              activeClass="text-pink-600"
+              className="cursor-pointer"
             >
               Services
-            </NavLink>
+            </Link>
           </li>
           <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
-            <NavLink
-              to="/work"
-              className={(navData) =>
-                navData.isActive ? "text-pink-600" : ""
-              }
+            <Link
+              to="work"
+              spy
+              smooth
+              duration={500}
+              offset={-80}
+              activeClass="text-pink-600"
+              className="cursor-pointer"
             >
               Work
-            </NavLink>
+            </Link>
           </li>
           <li className="hover:text-pink-600" onMouseEnter={() => playHover()}>
-            <NavLink
-              to="/contact"
-              className={(navData) =>
-                navData.isActive ? "text-pink-600" : ""
-              }
+            <Link
+              to="contact"
+              spy
+              smooth
+              duration={500}
+              offset={-80}
+              activeClass="text-pink-600"
+              className="cursor-pointer"
             >
               Contact
-            </NavLink>
+            </Link>
           </li>
         </ul>
         {/* Hamburger */}
@@ -118,22 +142,88 @@ const Navbar = () => {
         }
       >
         <li className="py-6 text-4xl hover:text-pink-600">
-          <a href="/">Home</a>
+          <Link
+            to="home"
+            spy
+            smooth
+            duration={500}
+            offset={-80}
+            activeClass="text-pink-600"
+            className="cursor-pointer"
+            onClick={() => setNav(false)}
+          >
+            Home
+          </Link>
         </li>
         <li className="py-6 text-4xl hover:text-pink-600">
-          <a href="/about">About</a>
+          <Link
+            to="about"
+            spy
+            smooth
+            duration={500}
+            offset={-80}
+            activeClass="text-pink-600"
+            className="cursor-pointer"
+            onClick={() => setNav(false)}
+          >
+            About
+          </Link>
         </li>
         <li className="py-6 text-4xl hover:text-pink-600">
-          <a href="/skills">Skills</a>
+          <Link
+            to="skills"
+            spy
+            smooth
+            duration={500}
+            offset={-80}
+            activeClass="text-pink-600"
+            className="cursor-pointer"
+            onClick={() => setNav(false)}
+          >
+            Skills
+          </Link>
         </li>
         <li className="py-6 text-4xl hover:text-pink-600">
-          <a href="/services">Services</a>
+          <Link
+            to="services"
+            spy
+            smooth
+            duration={500}
+            offset={-80}
+            activeClass="text-pink-600"
+            className="cursor-pointer"
+            onClick={() => setNav(false)}
+          >
+            Services
+          </Link>
         </li>
         <li className="py-6 text-4xl hover:text-pink-600">
-          <a href="/work">Work</a>
+          <Link
+            to="work"
+            spy
+            smooth
+            duration={500}
+            offset={-80}
+            activeClass="text-pink-600"
+            className="cursor-pointer"
+            onClick={() => setNav(false)}
+          >
+            Work
+          </Link>
         </li>
         <li className="py-6 text-4xl hover:text-pink-600">
-          <a href="/contact">Contact</a>
+          <Link
+            to="contact"
+            spy
+            smooth
+            duration={500}
+            offset={-80}
+            activeClass="text-pink-600"
+            className="cursor-pointer"
+            onClick={() => setNav(false)}
+          >
+            Contact
+          </Link>
         </li>
 
         <ul className="absolute flex bottom-[30px]">

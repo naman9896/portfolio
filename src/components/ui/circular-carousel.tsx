@@ -182,23 +182,23 @@ export function CircularCarousel({
             );
           })}
         </AnimatePresence>
-      </div>
 
-      {/* Center content */}
-      <motion.div
-        key={activeItem.id}
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
-      >
-        <span className="text-5xl font-bold tracking-tight text-foreground/90">
-          {String(activeIndex + 1).padStart(2, "0")}
-        </span>
-        <span className="mt-1 text-xs text-muted-foreground">
-          of {String(total).padStart(2, "0")}
-        </span>
-      </motion.div>
+        {/* Center content */}
+        <motion.div
+          key={activeItem.id}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+        >
+          <span className="text-5xl font-bold tracking-tight text-foreground/90">
+            {String(activeIndex + 1).padStart(2, "0")}
+          </span>
+          <span className="mt-1 text-xs text-muted-foreground">
+            of {String(total).padStart(2, "0")}
+          </span>
+        </motion.div>
+      </div>
 
       {/* Controls */}
       <div className="flex items-center gap-4">

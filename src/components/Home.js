@@ -1,6 +1,6 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
-// import { Link } from "react-scroll";
+import { Link } from "react-scroll";
 // import Typed from "react-typed";
 import TextLoop from "react-text-loop";
 import Particles from "react-tsparticles";
@@ -41,17 +41,17 @@ const Home = () => {
           passionate about web development so that I can leverage my creativity.
         </p>
         <div className="introLoadMain">
-          <MovingBorderButton
-            as="a"
-            href="/work"
-            containerClassName="w-44 h-14 my-2"
-            className="group hover:text-white hover:bg-pink-600 transition-colors duration-300"
-          >
-            View Work
-            <span className="group-hover:rotate-90 duration-300 ml-2">
-              <HiArrowNarrowRight />
-            </span>
-          </MovingBorderButton>
+          <Link to="work" smooth duration={500} offset={-80} className="cursor-pointer">
+            <MovingBorderButton
+              containerClassName="w-44 h-14 my-2"
+              className="group hover:text-white hover:bg-pink-600 transition-colors duration-300"
+            >
+              View Work
+              <span className="group-hover:rotate-90 duration-300 ml-2">
+                <HiArrowNarrowRight />
+              </span>
+            </MovingBorderButton>
+          </Link>
         </div>
       </div>
     </div>
