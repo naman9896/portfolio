@@ -3,6 +3,14 @@
   "framework": "vite",
   "buildCommand": "vite-react-ssg build",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "naman-dev.com" }],
+      "destination": "https://www.naman-dev.com/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
