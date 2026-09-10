@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "next-themes";
+import { ClientOnly } from "vite-react-ssg";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -9,6 +10,7 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import AnimatedCursor from "react-animated-cursor";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import AuroraBackground from "./components/ui/aurora-background";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -21,15 +23,26 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider attribute="class" forcedTheme="light" defaultTheme="light">
+    <ThemeProvider attribute="class" forcedTheme="dark" defaultTheme="dark">
       <div>
+        {/* Decorative only (aria-hidden). Client-only: uses Math.random() so it
+            can't be prerendered without a hydration mismatch. */}
+        <ClientOnly>{() => <AuroraBackground />}</ClientOnly>
         {loading ? (
           <div className="animation-logo">
             <ScaleLoader color={"#E234D6"} loading={loading} size={20} />
           </div>
         ) : (
           <>
-            <AnimatedCursor innerSize={12} outerSize={8} color="193, 11, 111" />
+            <ClientOnly>
+              {() => (
+                <AnimatedCursor
+                  innerSize={12}
+                  outerSize={8}
+                  color="193, 11, 111"
+                />
+              )}
+            </ClientOnly>
             <Navbar />
             <Home />
             <About />

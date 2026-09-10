@@ -1,0 +1,16 @@
+{
+  "short_name": "Naman Mattu",
+  "name": "Naman Mattu — Web Developer",
+  "description": "Portfolio of Naman Mattu, web developer based in Newcastle, Australia.",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}

@@ -38,7 +38,7 @@ const Navbar = () => {
             className="cursor-pointer"
             onMouseEnter={() => playHover()}
           >
-            <img src={Logo} alt="Logo" className="logo" />
+            <img src={Logo} alt="Naman Mattu — web developer, Newcastle" className="logo" />
           </Link>
         </div>
         {/* Menu */}

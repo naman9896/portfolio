@@ -22,8 +22,8 @@ export interface CircularCarouselProps {
 }
 
 const VISIBLE_COUNT = 5;
-const RADIUS_X = 220;
-const RADIUS_Y = 100;
+const RADIUS_X = 230;
+const RADIUS_Y = 95;
 
 function getItemPosition(index: number, activeIndex: number, total: number) {
   const offset = index - activeIndex;
@@ -116,7 +116,7 @@ export function CircularCarousel({
       )}
     >
       {/* Circular track */}
-      <div className="relative h-[280px] w-full max-w-lg">
+      <div className="relative h-[360px] w-full max-w-2xl">
         <AnimatePresence mode="popLayout">
           {items.map((item, i) => {
             const pos = getItemPosition(i, activeIndex, total);
@@ -146,33 +146,36 @@ export function CircularCarousel({
                 aria-selected={isActive}
                 role="option"
                 className={cn(
-                  "absolute left-1/2 top-1/2 flex h-32 w-48 -translate-x-1/2 -translate-y-1/2 cursor-pointer flex-col items-start justify-between rounded-2xl border border-border bg-card p-4 backdrop-blur-sm transition-shadow duration-300",
+                  // Centering is done with negative margins, not translate:
+                  // motion's animate={{ x, y }} owns the `transform` property.
+                  "absolute left-1/2 top-1/2 -ml-[104px] -mt-[72px] flex h-36 w-52 cursor-pointer flex-col items-start justify-start gap-1.5 overflow-hidden rounded-2xl border border-border bg-card p-4 text-left backdrop-blur-sm transition-shadow duration-300",
                   isActive
                     ? "shadow-[0_20px_60px_-12px_rgba(0,0,0,0.25)]"
                     : "shadow-[0_8px_24px_-4px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_32px_-4px_rgba(0,0,0,0.18)]",
                 )}
-                style={{ transformOrigin: "center center" }}
               >
                 {item.tag && (
-                  <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-primary">
+                  <span className="shrink-0 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-primary">
                     {item.tag}
                   </span>
                 )}
-                <div className="w-full">
+                <div className="w-full min-w-0">
                   <h3
                     className={cn(
-                      "font-semibold leading-tight transition-colors duration-300",
+                      "line-clamp-2 font-semibold leading-tight transition-colors duration-300",
                       isActive
-                        ? "text-card-foreground text-base"
-                        : "text-card-foreground/70 text-sm",
+                        ? "text-card-foreground text-sm"
+                        : "text-card-foreground/70 text-xs",
                     )}
                   >
                     {item.title}
                   </h3>
                   <p
                     className={cn(
-                      "mt-1 line-clamp-2 text-xs leading-relaxed transition-colors duration-300",
-                      isActive ? "text-muted-foreground" : "text-muted-foreground/60",
+                      "mt-1 text-[11px] leading-snug transition-colors duration-300",
+                      isActive
+                        ? "line-clamp-3 text-muted-foreground"
+                        : "line-clamp-2 text-muted-foreground/60",
                     )}
                   >
                     {item.description}
@@ -183,18 +186,19 @@ export function CircularCarousel({
           })}
         </AnimatePresence>
 
-        {/* Center content */}
+        {/* Center content — sits below the arc of cards */}
         <motion.div
           key={activeItem.id}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+          style={{ x: "-50%", y: 92 }}
+          className="pointer-events-none absolute left-1/2 top-1/2 flex flex-col items-center"
         >
-          <span className="text-5xl font-bold tracking-tight text-foreground/90">
+          <span className="text-4xl font-bold leading-none tracking-tight text-foreground/90">
             {String(activeIndex + 1).padStart(2, "0")}
           </span>
-          <span className="mt-1 text-xs text-muted-foreground">
+          <span className="mt-1.5 text-[11px] uppercase tracking-widest text-muted-foreground">
             of {String(total).padStart(2, "0")}
           </span>
         </motion.div>

@@ -1,73 +1,52 @@
-![Screenshot 2022-04-25 at 12 54 23 AM](https://user-images.githubusercontent.com/65879727/164993069-caf6910e-18d6-4064-85a1-59070fc435ad.png)
+![Portfolio](https://user-images.githubusercontent.com/65879727/164993069-caf6910e-18d6-4064-85a1-59070fc435ad.png)
 
+# naman-dev.com
 
-# Getting Started with Create React App
+Personal portfolio of **Naman Mattu** — web developer based in Newcastle, Australia.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built with **React 18 + Vite**, styled with **Tailwind CSS**, and pre-rendered to
+static HTML at build time with **[vite-react-ssg](https://github.com/Daydreamer-riri/vite-react-ssg)**
+(single-page mode) so the content is crawlable by search engines and social/link
+unfurlers without needing JavaScript.
 
-## Available Scripts
+## Scripts
 
-In the project directory, you can run:
+| Command | What it does |
+| --- | --- |
+| `yarn dev` | Start the Vite dev server (client-rendered, fast HMR) at http://localhost:5173 |
+| `yarn build` | Type-free production build **+ static pre-render** → `dist/` |
+| `yarn preview` | Serve the built `dist/` locally to check the pre-rendered output |
 
-### `yarn start`
+## Deployment (Vercel)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`vercel.json` pins the build:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```jsonc
+"buildCommand": "vite-react-ssg build",
+"outputDirectory": "dist"
+```
 
-### `yarn test`
+Push to `main` and Vercel builds and deploys. After deploying, confirm
+`/robots.txt` and `/sitemap.xml` return plain text / XML (not the app shell),
+then in Google Search Console submit `sitemap.xml` and request indexing for
+`https://www.naman-dev.com/`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## SEO notes
 
-### `yarn build`
+- `index.html` (project root) holds the `<title>`, meta description, canonical,
+  Open Graph / Twitter tags, and JSON-LD (`Person` + `WebSite`). Edit it there.
+- Client-only widgets (animated cursor, aurora background, icon cloud) are wrapped
+  in `<ClientOnly>` from `vite-react-ssg` so they don't run during pre-render.
+- `public/` holds static files served at the site root: `robots.txt`,
+  `sitemap.xml`, `manifest.json`, `logo.png`, `icons/`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project layout
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+index.html              # HTML entry + all <head> SEO tags
+src/main.jsx            # ViteReactSSG single-page entry
+src/App.jsx             # app shell (sections + providers)
+src/components/*.jsx    # page sections
+src/components/ui/*.tsx # shared UI primitives
+vite.config.ts         # React plugin, "@" alias, ssr.noExternal for legacy CJS deps
+```

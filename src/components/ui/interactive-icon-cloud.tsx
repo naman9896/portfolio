@@ -38,8 +38,8 @@ export const cloudProps: Omit<ICloud, "children"> = {
 export const renderCustomIcon = (icon: SimpleIcon) => {
   return renderSimpleIcon({
     icon,
-    bgHex: "#ffffff",
-    fallbackHex: "#334155",
+    bgHex: "#0a0a0f",
+    fallbackHex: "#9ca3af",
     minContrastRatio: 1.2,
     size: 42,
     aProps: {

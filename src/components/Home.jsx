@@ -3,19 +3,16 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 // import Typed from "react-typed";
 import TextLoop from "react-text-loop";
-import Particles from "react-tsparticles";
-import options from "./options";
 import { Button as MovingBorderButton } from "./ui/moving-border";
 
 const Home = () => {
   return (
     <div name="home" className="w-full h-screen">
       {/* Container */}
-      <Particles className="absolute z-[-1]" options={options} />
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <p className="text-pink-600 introLoadMain">Hi, my name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-foreground introLoadMain">
-          Naman
+          Naman Mattu
         </h1>
         <h2 className="text-4xl sm:text-7xl font-bold text-muted-foreground introLoadMain">
           I'm a{" "}
@@ -36,9 +33,11 @@ const Home = () => {
           /> */}
         </h2>
         <p className="text-muted-foreground py-4 max-w-[700px] introLoadMain">
-          I'm specialized in Front-end Development. I recently completed my
-          Master of Information Technology from University of Newcastle. I'm
-          passionate about web development so that I can leverage my creativity.
+          I'm a web developer based in Newcastle, Australia, specialising in
+          front-end development with React and TypeScript. I recently completed
+          my Master of Information Technology at the University of Newcastle and
+          build fast, modern websites for small businesses and startups across
+          the Hunter region.
         </p>
         <div className="introLoadMain">
           <Link to="work" smooth duration={500} offset={-80} className="cursor-pointer">

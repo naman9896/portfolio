@@ -5,7 +5,7 @@ const withOpacity = (variable) => ({ opacityValue }) =>
 
 module.exports = {
   darkMode: ["class"],
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -13,11 +13,21 @@ module.exports = {
         foreground: withOpacity("--foreground"),
         card: withOpacity("--card"),
         "card-foreground": withOpacity("--card-foreground"),
+        popover: withOpacity("--popover"),
+        "popover-foreground": withOpacity("--popover-foreground"),
         muted: withOpacity("--muted"),
         "muted-foreground": withOpacity("--muted-foreground"),
         primary: withOpacity("--primary"),
         "primary-foreground": withOpacity("--primary-foreground"),
+        secondary: withOpacity("--secondary"),
+        "secondary-foreground": withOpacity("--secondary-foreground"),
+        accent: withOpacity("--accent"),
+        "accent-foreground": withOpacity("--accent-foreground"),
+        destructive: withOpacity("--destructive"),
+        "destructive-foreground": withOpacity("--destructive-foreground"),
         border: withOpacity("--border"),
+        input: withOpacity("--input"),
+        ring: withOpacity("--ring"),
       },
     },
   },

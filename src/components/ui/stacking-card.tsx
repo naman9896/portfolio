@@ -76,9 +76,9 @@ const Card = ({
         className="flex flex-col relative -top-[25%] h-[560px] w-[90%] sm:w-[80%] md:w-[70%] rounded-2xl p-6 sm:p-10 origin-top shadow-2xl"
         onMouseEnter={() => playHover()}
       >
-        <h2 className="text-2xl text-center font-semibold text-white">
+        <h3 className="text-2xl text-center font-semibold text-white">
           {title}
-        </h2>
+        </h3>
         <div className="flex flex-col md:flex-row h-full mt-5 gap-6 md:gap-10">
           <div className="md:w-[40%] relative md:top-[10%]">
             <p className="text-sm text-white/90">{description}</p>
